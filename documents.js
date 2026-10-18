@@ -28,6 +28,15 @@
     preview.style.left = `${left}px`;
     preview.style.top = `${top}px`;
   }
+  // Warm preview images shortly before the education section is reached so the first hover is instant.
+  const rows = document.querySelectorAll('[data-document-hover]');
+  const warm = () => Object.values(assets).flat().forEach(src => { const img = new Image(); img.decoding = 'async'; img.src = src; });
+  if (rows.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { warm(); observer.disconnect(); }
+    }, { rootMargin: '800px' });
+    observer.observe(rows[0]);
+  }
   document.querySelectorAll('[data-document-hover]').forEach(row => {
     const button = row.querySelector('[data-document-open]');
     row.addEventListener('pointerenter', () => showPreview(row));
