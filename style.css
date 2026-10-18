@@ -27,5 +27,5 @@ header .brand-logo{display:flex;align-items:center;gap:12px;color:var(--wine)}.b
 .lang a,.language a,header a[hreflang],a.RU,a.EN{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
 summary{min-height:44px;display:flex;align-items:center}
 .document-trigger,.education-cta,.wordmark{display:inline-flex;align-items:center;min-height:44px}
-footer a{display:inline-flex;align-items:center;min-height:44px}
+.contact-note,footer a{display:inline-flex;align-items:center;min-height:44px}
 }
