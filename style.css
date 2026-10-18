@@ -25,7 +25,16 @@ header .brand-logo{display:flex;align-items:center;gap:12px;color:var(--wine)}.b
 /* Mobile polish: comfortable tap targets */
 @media(max-width:760px){
 .lang a,.language a,header a[hreflang],a.RU,a.EN{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
-summary{min-height:44px;display:flex;align-items:center}
+summary{display:list-item;padding:12px 0}
 .document-trigger,.education-cta,.wordmark{display:inline-flex;align-items:center;min-height:44px}
 .contact-note,footer a{display:inline-flex;align-items:center;min-height:44px}
+}
+
+/* Mobile pass 2: Telegram link, legibility, dialog controls */
+@media(max-width:760px){
+.contact-note a{display:inline-flex;align-items:center;min-height:44px}
+.wordmark .brand-subtitle{font-size:10px}
+#brief .close{width:44px;height:44px;display:grid;place-items:center;right:8px;top:4px}
+#brief input[type=file]{min-height:48px}
+#brief input[type=file]::file-selector-button{min-height:40px;padding:0 14px;margin-right:10px;border:1px solid var(--wine);background:transparent;color:var(--wine);font:inherit;border-radius:2px}
 }
